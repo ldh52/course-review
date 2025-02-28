@@ -3,7 +3,7 @@
 git checkout -b 'feature/#1'
 
 2. 변경사항 작업 후 커밋:<br>
-git add .
+git add .<br>
 git commit -m "Feature #1 구현"
 
 3. 원격에 새 브랜치 푸시:<br>
