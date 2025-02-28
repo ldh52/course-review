@@ -10,7 +10,7 @@ git checkout main
 git fetch --all
 
 3. 완료한 feature/#1 브랜치 삭제:<br>
-git branch -d feature/#1
+git branch -d origin/feature/#1
 
 4. 로컬 feature/#2 브랜치 생성/전환:<br>
 git checkout -b origin/feature/#2<br>
@@ -20,7 +20,7 @@ git add .<br>
 git commit -m "Feature #2 구현"
 
 7. 원격 feature/#2 브랜치로 푸시:<br>
-git push origin 'feature/#2'
+git push origin feature/#2
 -------------------------------------
 - 원격에서 Pull Request
 - feature/#2 브랜치 삭제
