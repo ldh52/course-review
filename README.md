@@ -14,7 +14,6 @@ git branch -d feature/#1
 
 4. 로컬 feature/#2 브랜치 생성/전환:<br>
 git checkout -b feature/#2<br>
-git checkout feature/#2
 
 6. 변경사항 작업 후 커밋:<br>
 git add .<br>
