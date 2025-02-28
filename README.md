@@ -12,8 +12,8 @@ git pull origin main
 3. 완료한 feature/#1 브랜치 삭제:<br>
 git branch -d feature/#1
 
-4. 로컬에서 feature/#2 브랜치로 전환:<br>
-git checkout feature/#2
+4. 원격의 feature/#2 브랜치를 추적하는 로컬 브랜치 생성 및 전환:<br>
+git checkout -b feature/#2 origin/feature/#2
 
 5. 변경사항 작업 후 커밋:<br>
 git add .<br>
