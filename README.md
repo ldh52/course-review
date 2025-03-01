@@ -7,13 +7,13 @@
 git checkout main
 
 2. main 브랜치 최신화:<br>
-git pull origin main
+git fetch --all
 
 3. 완료한 feature/#1 브랜치 삭제:<br>
-git branch -d feature/#1
+git branch -d origin/feature/#1
 
-4. 원격의 feature/#2 브랜치를 추적하는 로컬 브랜치 생성 및 전환:<br>
-git checkout -b feature/#2 feature/#2
+4. 로컬 feature/#2 브랜치 생성/전환:<br>
+git checkout -b feature/#2<br>
 
 5. 변경사항 작업 후 커밋:<br>
 git add .<br>
