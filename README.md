@@ -15,11 +15,11 @@ git branch -d origin/feature/#1
 4. 로컬 feature/#2 브랜치 생성/전환:<br>
 git checkout -b feature/#2<br>
 
-6. 변경사항 작업 후 커밋:<br>
+5. 변경사항 작업 후 커밋:<br>
 git add .<br>
 git commit -m "Feature #2 구현"
 
-7. 원격 feature/#2 브랜치로 푸시:<br>
+6. 원격 feature/#2 브랜치로 푸시:<br>
 git push origin feature/#2
 -------------------------------------
 - 원격에서 Pull Request
