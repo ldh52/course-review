@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -42,6 +43,34 @@ public class UserController {
         List<User> userList = userService.getUsers();
         model.addAttribute("userList", userList);
         return "user/list";
+    }
+
+    @GetMapping("/delete/{uid}")
+    public String delete(@PathVariable String uid) {
+        userService.deleteUser(uid);
+        return "redirect:/user/list";
+    }
+
+    @GetMapping("/update/{uid}")
+    public String update(@PathVariable String uid, Model model) {
+        User user = userService.findByUid(uid);
+        model.addAttribute("user", user);
+        return "user/update";
+    }
+
+    @PostMapping("/update")
+    public String updateProc(String uid, String pwd, String pwd2, String uname, String email,
+        String role) {
+        User user = userService.findByUid(uid);
+        if (pwd.equals(pwd2) && pwd.length() >= 4) {
+            String hashedPwd = BCrypt.hashpw(pwd, BCrypt.gensalt());
+            user.setPwd(hashedPwd);
+        }
+        user.setUname(uname);
+        user.setEmail(email);
+        user.setRole(role);
+        userService.updateUser(user);
+        return "redirect:/user/list";
     }
 
 }
