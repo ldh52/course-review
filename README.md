@@ -13,7 +13,7 @@ git fetch --all
 git branch -d origin/feature/#1
 
 4. 로컬 feature/#2 브랜치 생성/전환:<br>
-git checkout -b origin/feature/#2<br>
+git checkout -b feature/#2<br>
 
 6. 변경사항 작업 후 커밋:<br>
 git add .<br>
