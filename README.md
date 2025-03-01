@@ -13,14 +13,14 @@ git pull origin main
 git branch -d feature/#1
 
 4. 원격의 feature/#2 브랜치를 추적하는 로컬 브랜치 생성 및 전환:<br>
-git checkout -b feature/#2 origin/feature/#2
+git checkout -b feature/#2 feature/#2
 
 5. 변경사항 작업 후 커밋:<br>
 git add .<br>
 git commit -m "Feature #2 구현"
 
 6. 원격 feature/#2 브랜치로 푸시:<br>
-git push origin 'feature/#2'
+git push origin feature/#2
 -------------------------------------
 - 원격에서 Pull Request
 - feature/#2 브랜치 삭제
